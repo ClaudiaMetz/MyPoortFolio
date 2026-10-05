@@ -1,14 +1,14 @@
 /* Variables de color para ambos modos */
 :root {
-  --bg-color: #f8f9fa;
-  --text-color: #1a1a1a;
+  --bg-gradient: linear-gradient(135deg, #f5e9f5, #c68de1, #6a0dad);
+  --text-color: #36054d;
   --accent-color: #db0bea;
   --header-bg: #ffffff;
   --card-bg: #ffffff;
 }
 
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-gradient: linear-gradient(135deg, #2c2c2c, #6a0dad);
   --text-color: #eaeaea;
   --accent-color: #db0bea;
   --header-bg: #1e1e1e;
@@ -24,25 +24,19 @@
 
 /* Body y fuente general */
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-gradient);
   color: var(--text-color);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 2rem;
-}
-
-body > section,
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 1rem;
 }
 
 /* Encabezado */
 header {
   background-color: var(--header-bg);
   padding: 1.5rem 2rem;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -67,18 +61,27 @@ header h1 {
 }
 #themeToggle:hover,
 #Translate:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Navegación */
-nav ul {
+
+.navegador {
+  width: 1000px;
+  margin: 0 auto;
+  /*display: flex;
+  justify-content: flex-start;
+  align-items: center;*/
+}
+
+.navegador ul {
   display: flex;
   gap: 2rem;
   list-style: none;
   margin-top: 1rem;
 }
 
-nav a {
+.navegador a {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: 500;
@@ -88,7 +91,9 @@ nav a {
 section {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  max-width: 800px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Proyectos */
@@ -155,8 +160,8 @@ a:hover {
 
 .flip-card {
   background-color: transparent;
-  width: 320px;
-  height: 280px;
+  width: 300px;
+  height: 320px;
   perspective: 1000px;
 }
 
@@ -276,4 +281,37 @@ body.dark-mode {
   --boton-bg: #333;
   --boton-text: #f0f0f0;
   --boton-hover: #444;
+}
+
+hr {
+  margin-top: 3rem;
+}
+
+.footer {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  border-radius: 8px;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
