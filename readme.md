@@ -1,32 +1,24 @@
-# Claudia Metz Portfolio
+# Claudia Metz | Portfolio
 
-🚀 **First commit – portfolio launch begins.**  
-This marks the start of a modular, scalable, and emotionally resonant journey through full-stack development, Web2 and Web3 integration, and storytelling, Data projects and more.
+Personal portfolio showcasing projects across web development, Web3, data science, and artificial intelligence.
 
----
+## About
 
-## 🧩 About this project
+This portfolio brings together selected projects and experiments developed through academic work and independent learning.
 
-This portfolio showcases technical depth and human connection. It includes:
+The site uses a flip-card interface to organize projects into three areas:
 
-- Modular React components
-- **SimpleDEX**: Smart contract integration with a dedicated React frontend
-- **E-commerce IA**: A project powered by two AI agents
-- Responsive design and flip-card UI
-- Academic and narrative projects like _Ponele Música a tus Emociones_
+- **WEB 2:** Web development and applications.
+- **WEB 3:** Blockchain, smart contracts, and decentralized applications.
+- **DATA:** Data science, analytics, and artificial intelligence.
 
-## 📦 Tech Stack
+## Tech Stack
 
-HTML · CSS · JavaScript · Bootstrap · React · Spring Boot · MySQL · Node.js · Web3: Solidity and Midnight · Streamlit · Visualizations · Trello · Git
+- HTML5
+- CSS3
+- JavaScript
+- Git and GitHub Pages
 
-## 🚧 Status
+## Status
 
-Actively evolving. Current focus:
-
-- Finalizing DEX and e-commerce integrations
-- Polishing responsive layout
-- Preparing storytelling section
-
-## 📌 Roadmap
-
-See [Mi Portfolio Trello Board](https://trello.com/b/Ysh49Lj8/mi-portfolio) for task tracking and progress.
+The portfolio is a work in progress. Current improvements focus on project organization, responsive design, and presenting each project with clear, accurate technical information.

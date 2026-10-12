@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -9,12 +9,16 @@
   <body>
     <header>
       <h1>Claudia Metz</h1>
-      <p>Full-Stack Dev | Blockchain | AI Systems | Lean Thinking</p>
+      <p>Data Science & AI | Digital Technologies | Critical Thinking</p>
       <div id="botones-utilidad">
         <button id="themeToggle">🌗 Cambiar tema</button>
         <button
           id="Translate"
-          onclick="window.location.href='https://translate.google.com/translate?hl=&sl=auto&tl=en&u=' + window.location.href"
+          onclick="
+            window.location.href =
+              'https://translate.google.com/translate?hl=&sl=auto&tl=en&u=' +
+              window.location.href
+          "
         >
           🌐 Traducir página
         </button>
@@ -26,7 +30,7 @@
             "data-theme",
             document.documentElement.getAttribute("data-theme") === "dark"
               ? "light"
-              : "dark"
+              : "dark",
           );
         });
       </script>
@@ -43,12 +47,13 @@
     <section id="about">
       <h2>Sobre mí</h2>
       <p>
-        Desarrolladora con foco en Arquitectura Modular, E-Commerce dinámico y
-        Smart Contracts. Disfruto crear sistemas que integren IA práctica y
-        lógica backend con interfaces intuitivas. Aplico Lean Thinking para
-        optimizar procesos y diseño soluciones escalables que conectan
-        tecnología con propósito. Busco mantenerme al día y explorar nuevas
-        formas de aprender, crear y mejorar.
+        Técnica Superior en Ciencia de Datos e IA, actualmente cursando las
+        Licenciaturas en Ciencia de Datos y Tecnologías Digitales. Exploro cómo
+        conectar datos, tecnología e inteligencia artificial para crear
+        soluciones útiles, con criterio y foco en las necesidades reales. Me
+        interesa comprender los sistemas, experimentar con herramientas y
+        transformar ideas en proyectos funcionales, sin perder de vista el
+        propósito ni la calidad de lo que construyo.
       </p>
     </section>
 
@@ -199,9 +204,10 @@
     <footer class="footer">
       <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
       <div class="footer-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Contacto</a>
+        <a href="https://github.com/ClaudiaMetz">GitHub</a>
+        <a href="https://www.linkedin.com/in/claudia-metz">LinkedIn</a>
+        <a href="mailto:claudiametz9@gmail.com">Contacto</a>
+        <a href="https://medium.com/@claudiametz">Medium</a>
       </div>
     </footer>
   </body>

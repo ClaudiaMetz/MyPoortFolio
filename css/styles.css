@@ -2,7 +2,7 @@
 :root {
   --bg-gradient: linear-gradient(135deg, #f5e9f5, #c68de1, #6a0dad);
   --text-color: #36054d;
-  --accent-color: #db0bea;
+  --accent-color: #bd0bea;
   --header-bg: #ffffff;
   --card-bg: #ffffff;
 }
@@ -428,6 +428,10 @@ hr {
 .footer-links a {
   color: var(--accent-color);
   text-decoration: none;
+}
+
+.footer-links a[href*="medium.com"] {
+  display: none;
 }
 
 .footer-links a:hover {
