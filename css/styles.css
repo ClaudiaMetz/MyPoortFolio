@@ -257,7 +257,7 @@ a:hover {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  width: min(100%, 300px);
   height: 320px;
   perspective: 1000px;
 }
@@ -361,6 +361,13 @@ a:hover {
   .flip-card-front,
   .flip-card-back {
     height: 100%;
+  }
+}
+
+/* Evita que las tres columnas compriman las tarjetas en tablets. */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-groups {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -598,5 +605,23 @@ hr {
 
   .footer-links {
     gap: 0.5rem 0.75rem;
+  }
+}
+
+/* Aprovecha mejor las pantallas grandes sin ensanchar el contenido indefinidamente. */
+@media (min-width: 1300px) {
+  header,
+  .navegador,
+  section,
+  #projects,
+  .footer {
+    max-width: 1200px;
+  }
+}
+
+/* En el diseño apilado, las tarjetas ocupan más espacio dentro de cada sección. */
+@media (max-width: 1024px) {
+  .flip-card {
+    width: min(100%, 620px);
   }
 }
