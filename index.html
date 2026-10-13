@@ -290,8 +290,9 @@
                 <div class="flip-card-back">
                   <h3>🚦 Datos, clima y modelos</h3>
                   <p>
-                    Proyecto grupal de The Outliers<sup>*</sup> sobre datos de CABA,
-                    enriquecidos con información climática y de calendario.
+                    Proyecto grupal de The Outliers<sup>*</sup> sobre datos de
+                    CABA, enriquecidos con información climática y de
+                    calendario.
                   </p>
                   <p>
                     Compara enfoques de machine learning sobre un conjunto
@@ -334,7 +335,7 @@
     </main>
     <footer class="footer" id="contact">
       <div class="footer-content">
-        <p>&copy; 2026 Mi Portfolio. Designed and powered by ClaudiaM.</p>
+        <p>&copy; 2026 Designed and powered by ClaudiaM.</p>
         <div class="footer-links">
           <a href="https://github.com/ClaudiaMetz">GitHub</a>
           <a href="https://www.linkedin.com/in/claudia-metz">LinkedIn</a>
@@ -353,6 +354,43 @@
         alt="Gato de Cheshire"
       />
     </footer>
+    <button
+      class="back-to-top"
+      type="button"
+      aria-label="Volver arriba"
+      aria-hidden="true"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 19V5m-7 7 7-7 7 7" />
+      </svg>
+    </button>
+    <script>
+      if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+        document.querySelectorAll(".flip-card").forEach((card) => {
+          card.addEventListener("click", (event) => {
+            if (event.target.closest("a, button")) return;
+            card.classList.toggle("is-flipped");
+          });
+        });
+      }
+
+      const backToTop = document.querySelector(".back-to-top");
+      const updateBackToTop = () => {
+        const isVisible = window.scrollY > 300;
+        backToTop.classList.toggle("is-visible", isVisible);
+        backToTop.setAttribute("aria-hidden", String(!isVisible));
+      };
+
+      window.addEventListener("scroll", updateBackToTop, { passive: true });
+      backToTop.addEventListener("click", () => {
+        const behavior = window.matchMedia("(prefers-reduced-motion: reduce)")
+          .matches
+          ? "auto"
+          : "smooth";
+        window.scrollTo({ top: 0, behavior });
+      });
+      updateBackToTop();
+    </script>
   </body>
 </html>
 
