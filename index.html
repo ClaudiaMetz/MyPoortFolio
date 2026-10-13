@@ -8,8 +8,19 @@
   </head>
   <body>
     <header>
-      <h1>Claudia Metz</h1>
-      <p>Data Science & AI | Digital Technologies | Critical Thinking</p>
+      <div class="header-identity">
+        <img
+          class="profile-image"
+          src="./assets/images/claudia-cheshire.png"
+          alt="Claudia Metz junto al gato de Cheshire"
+        />
+        <div class="header-copy">
+          <h1>Claudia Metz</h1>
+          <p>
+            Data Science &amp; AI | Digital Technologies | Critical Thinking
+          </p>
+        </div>
+      </div>
       <div id="botones-utilidad">
         <button id="themeToggle">🌗 Cambiar tema</button>
         <button
@@ -57,166 +68,295 @@
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Proyectos destacados</h2>
-      <div class="card-container">
-        <!-- SimpleDEX -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h3>🧪 SimpleDEX</h3>
-              <p>
-                DEX funcional con lógica de liquidez y swap de tokens basada en
-                contratos inteligentes.
-              </p>
-              <p>
-                Implementa el estándar ERC-20 para gestión de tokens fungibles.
-              </p>
-              <p>
-                El contrato está verificado en Sepolia y diseñado con
-                arquitectura modular para facilitar la escalabilidad y
-                auditoría.
-              </p>
-              <p>
-                Visualización desarrollada en React para interacción directa con
-                el contrato.
-              </p>
+    <main id="projects">
+      <h2>Proyectos</h2>
+      <div class="project-groups">
+        <section id="web2" class="project-section">
+          <h2>WEB 2</h2>
+          <div class="card-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🐾 Tienda Mascotas + TinderPet</h3>
+                  <p>
+                    Se destacan el catálogo de productos, carrito de compras y
+                    la sección de adopciones.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🐾 Tienda Mascotas</h3>
+                  <p>
+                    Frontend estático con catálogo renderizado desde JavaScript
+                    y carrito de compras sin conexión a medios de pago aún.
+                  </p>
+                  <h3>🐶 TinderPet</h3>
+                  <p>
+                    Sección de adopciones que carga animales (desde JSON
+                    momentáneamente) y permite filtrar por tipo, tamaño y edad.
+                    Es la base de diseño de un protoagente.
+                  </p>
+                  <p>
+                    <a
+                      href="https://claudiametz.github.io/TP-Final2024-Tienda-Mascotas-/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🌐 Ver sitio publicado</a
+                    ><br />
+                    <a
+                      href="https://github.com/ClaudiaMetz/TP-Final2024-Tienda-Mascotas-"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >📁 Repo en GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flip-card-back">
-              <h3>🧪 Swap Detallado</h3>
-              <p>
-                Calcula el ratio de intercambio con la fórmula
-                <em>x · y = k</em>.
-              </p>
-              <p>Valida saldo, aprueba tokens y ejecuta el swap en Sepolia.</p>
-              <p>
-                Arquitectura modular para facilitar auditoría y escalabilidad.
-              </p>
-              <p>
-                <a
-                  href="https://sepolia.etherscan.io/address/0x869ae3deb65c941d2562af7f70925356e47d4160"
-                  target="_blank"
-                  >🔍 Ver en Etherscan</a
-                ><br />
-                <a
-                  href="https://github.com/ClaudiaMetz/SimpleDEX-react"
-                  target="_blank"
-                  >📁 Repo en GitHub</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Tienda Mascotas -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h3>🐱Tienda Mascotas🐶</h3>
-              <p>
-                Tienda con agente que recomienda la mascota más adecuada para
-                cada adoptante.
-              </p>
-              <p>Sistema de recomendación con lógica modular y xxxxx.</p>
-            </div>
-            <div class="flip-card-back">
-              <h3>☁️ IA Recomienda</h3>
-              <p>Consulta xxxxx en tiempo real vía xxxxx.</p>
-              <p>
-                Filtra las mascotas según posibilidades y preferencias del
-                usuario.
-              </p>
-              <p>
-                Diseño modular para escalar funcionalidades y mejorar
-                experiencia.
-              </p>
-              <p>
-                <a
-                  href="https://github.com/ClaudiaMetz/WinterWarm"
-                  target="_blank"
-                  >📁 Repo en GitHub</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Go to Data Portfolio -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h3>🔗 Go to Data Portfolio</h3>
-              <p>Dashboards y análisis en Power BI.</p>
-              <p>Python, Colab, etc. <i>agregar</i></p>
-            </div>
-            <div class="flip-card-back">
-              <h3>📊 Power BI</h3>
-              <p>Tableros en Power BI.</p>
-              <h3>Otros temas</h3>
-              <p>Acá va colab, python, etc.</p>
-              <p>
-                Se muestran diferentes tipos de análisis de Datos trabajados con
-                varias herramientas.
-              </p>
-              <p>
-                <a
-                  href="https://Lleva a la página del Otro PortFolio "
-                  target="_blank"
-                  >📁 Ir al Portfolio de Datos</a
-                ><br />
-                <a
-                  href="https://github.com/ClaudiaMetz/ElOtroRepoDeDatos"
-                  target="_blank"
-                  >📁 Repo en GitHub</a
-                >
-              </p>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🌙 Violeta: Astrología y Tarot</h3>
+                  <p>
+                    Landing page responsive para presentar servicios de
+                    astrología y tarot.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🌙 Violeta</h3>
+                  <p>
+                    Servicios presentados en tarjetas y testimonios cargados
+                    dinámicamente (desde JSON para el demo).
+                  </p>
+                  <p>
+                    Desarrollada con HTML, CSS, Bootstrap 5.3.3 y JavaScript.
+                  </p>
+                  <p>
+                    El botón de WhatsApp conserva un número de ejemplo, listo
+                    para conexión real.
+                  </p>
+                  <p>
+                    <a
+                      href="https://claudiametz.github.io/Violeta_Astrologia_y_Tarot/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🌐 Ver sitio publicado</a
+                    ><br />
+                    <a
+                      href="https://github.com/ClaudiaMetz/Violeta_Astrologia_y_Tarot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >📁 Repo en GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+
+        <section id="web3" class="project-section">
+          <h2>WEB 3</h2>
+          <div class="card-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🧪 SimpleDEX</h3>
+                  <p>
+                    dApp en React para operar con un contrato de intercambio de
+                    tokens.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🧪 Interacción con el contrato</h3>
+                  <p>
+                    Conecta una wallet compatible con MetaMask para agregar o
+                    retirar liquidez, intercambiar tokens en ambos sentidos y
+                    consultar precios.
+                  </p>
+                  <p>
+                    La interfaz usa Web3.js y los contratos están desplegados y
+                    verificados en Sepolia.
+                  </p>
+                  <p>
+                    <a
+                      href="https://claudiametz.github.io/SimpleDEX-react/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🌐 Ver sitio publicado</a
+                    ><br />
+                    <a
+                      href="https://sepolia.etherscan.io/address/0x869ae3deb65c941d2562af7f70925356e47d4160"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🔍 Ver en Sepolia</a
+                    ><br />
+                    <a
+                      href="https://sepolia.etherscan.io/address/0xc814C520b8F65837500825786D5D0f8E9C706Bfc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🪙 TokenA</a
+                    ><br />
+                    <a
+                      href="https://sepolia.etherscan.io/address/0x928E7Cc1CCf65f323eBA4A0f1Be7486383831a1c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >🪙 TokenB</a
+                    ><br />
+                    <a
+                      href="https://github.com/ClaudiaMetz/SimpleDEX-react"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >📁 Repo en GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🔐 zkCheck</h3>
+                  <p>
+                    Prototipo de elegibilidad privada con Zero-Knowledge en
+                    Midnight. Desarrollado en el marco de la Hack BsAs (48 hs -
+                    Agosto 2026).
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🔐 Verificación privada</h3>
+                  <p>
+                    El contrato Compact explora cómo comprobar condiciones de
+                    elegibilidad sin exponer los datos privados usados para
+                    evaluarlas.
+                  </p>
+                  <p>
+                    El proyecto está en desarrollo: el contrato está listo y
+                    pasa los tests, la interfaz actual usa funciones mock y
+                    todavía no completa el flujo con el contrato.
+                  </p>
+                  <p>
+                    <a
+                      href="https://github.com/ClaudiaMetz/zkCheck"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >📁 Repo en GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="data-ai" class="project-section">
+          <h2>DATA &amp; AI</h2>
+          <div class="card-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🛸 OVNI Sightings<sup>*</sup></h3>
+                  <p>
+                    Análisis exploratorio y de series temporales sobre registros
+                    de avistamientos.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🛸 OVNI Sightings<sup>*</sup></h3>
+                  <p>
+                    Integra registros de Kaggle y datos argentinos recopilados
+                    mediante scraping, con preparación de datos para
+                    visualizaciones y series temporales, forecasting con ARIMA e
+                    implementación de criterios de accesibilidad.
+                  </p>
+                  <p>
+                    El análisis estudia los registros disponibles; no predice
+                    fenómenos extraterrestres.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>🚦 Siniestralidad vial en CABA<sup>*</sup></h3>
+                  <p>
+                    Análisis de siniestros viales y variables meteorológicas con
+                    experimentación de modelos.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <h3>🚦 Datos, clima y modelos<sup>*</sup></h3>
+                  <p>
+                    Proyecto grupal de The Outliers sobre datos de CABA,
+                    enriquecidos con información climática y de calendario.
+                  </p>
+                  <p>
+                    Compara enfoques de machine learning sobre un conjunto
+                    severamente desbalanceado; el foco está en el análisis y la
+                    interpretación crítica mostrando la dificultad de trabajar
+                    con un dataset poco equilibrado, no en afirmar un
+                    rendimiento predictivo alto.
+                  </p>
+                  <p>
+                    <a
+                      href="https://github.com/ClaudiaMetz/The_Outliers"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >📁 Repo del equipo en GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-credit">
+            <p>
+              <sup>*</sup> <strong>The Outliers</strong> Marian + Claudia<br />
+              Un equipo de dos, explorando datos, modelos y nuevas formas de
+              entender lo que nos rodea.
+            </p>
+          </div>
+
+          <div class="data-portfolio-link">
+            <a
+              href="https://github.com/ClaudiaMetz/portfolioDatos"
+              target="_blank"
+              rel="noopener noreferrer"
+              >📊 Portfolio especializado de Data &amp; AI (Streamlit)</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <p>&copy; 2026 Mi Portfolio. Designed and powered by ClaudiaM.</p>
+        <div class="footer-links">
+          <a href="https://github.com/ClaudiaMetz">GitHub</a>
+          <a href="https://www.linkedin.com/in/claudia-metz">LinkedIn</a>
+          <a href="mailto:claudiametz9@gmail.com">Contacto</a>
+          <a href="https://medium.com/@claudiametz">Medium</a>
         </div>
       </div>
-    </section>
-    <section id="skills">
-      <h2>Tech Stack</h2>
-      <div class="grid">
-        <div class="tech">
-          <img src="assets/icons/html.png" alt="Logo HTML" />
-          <p>HTML</p>
-        </div>
-        <div class="tech">
-          <img src="assets/icons/css.png" alt="Logo CSS" />
-          <p>CSS</p>
-        </div>
-        <div class="tech">
-          <img src="assets/icons/js.png" alt="Logo JavaScript" />
-          <p>JS</p>
-        </div>
-        <div class="tech">
-          <img src="assets/icons/react.png" alt="Logo React" />
-          <p>React</p>
-        </div>
-        <div class="tech">
-          <img src="assets/icons/solidity.png" alt="Logo Solidity" />
-          <p>Solidity</p>
-        </div>
-        <!-- Repetir para JS, Spring Boot, etc. -->
-      </div>
-    </section>
-    <hr />
-    <footer class="footer">
-      <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
-      <div class="footer-links">
-        <a href="https://github.com/ClaudiaMetz">GitHub</a>
-        <a href="https://www.linkedin.com/in/claudia-metz">LinkedIn</a>
-        <a href="mailto:claudiametz9@gmail.com">Contacto</a>
-        <a href="https://medium.com/@claudiametz">Medium</a>
-      </div>
+      <img
+        class="footer-cheshire footer-cheshire-light"
+        src="./assets/images/cheshire-footer-light.jpg"
+        alt="Gato de Cheshire"
+      />
+      <img
+        class="footer-cheshire footer-cheshire-dark"
+        src="./assets/images/cheshire-footer-dark.jpg"
+        alt="Gato de Cheshire"
+      />
     </footer>
   </body>
 </html>
 
-<!-- Desarrolladora especializada en arquitectura modular, e-commerce dinámico y smart
-contracts. Me apasiona el aprendizaje estructurado, la IA práctica y aplicar
-Lean Thinking para optimizar flujos de trabajo.
-
+<!--
 Plataforma DEX funcional con lógica de liquidez y swap de tokens basada en
 contratos inteligentes. Implementa estándares como ERC-20 para gestión de tokens
 fungibles, y explora integración con ERC-721 y ERC-1155 para funcionalidades
