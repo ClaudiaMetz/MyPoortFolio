@@ -366,11 +366,13 @@ a:hover {
   position: absolute;
   left: 50%;
   bottom: 1rem;
+  box-sizing: border-box;
   width: 90%;
   height: 123px;
   margin: 0;
   transform: translateX(-50%);
   border-radius: 6px;
+  border: 2px solid var(--accent-color);
   object-fit: cover;
   object-position: top;
 }
