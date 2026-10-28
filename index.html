@@ -17,7 +17,8 @@
         <div class="header-copy">
           <h1>Claudia Metz</h1>
           <p>
-            Data Science &amp; AI | Digital Technologies | Critical Thinking
+            Datos, IA y sistemas digitales con foco en utilidad, claridad e
+            impacto sin olvidar el pensamiento crítico
           </p>
         </div>
       </div>
@@ -51,6 +52,7 @@
       <ul>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#community">Comunidad y divulgación</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
@@ -70,6 +72,13 @@
 
     <main id="projects">
       <h2>Proyectos</h2>
+      <p>
+        Estas 3 áreas son un muestreo acotado de distintos aspectos de mi
+        formación y mi experiencia en tecnologías. El proyecto integrador
+        combina conceptos y herramientas de varias de ellas para crear una
+        solución completa y funcional.
+      </p>
+      <br />
       <div class="project-groups">
         <section id="web2" class="project-section">
           <h2>WEB 2</h2>
@@ -79,21 +88,21 @@
                 <div class="flip-card-front">
                   <h3>🐾 Tienda Mascotas + TinderPet</h3>
                   <p>
-                    Se destacan el catálogo de productos, carrito de compras y
-                    la sección de adopciones.
+                    Se destacan el catálogo de productos, el carrito de compras
+                    y la sección de adopciones.
                   </p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🐾 Tienda Mascotas</h3>
                   <p>
                     Frontend estático con catálogo renderizado desde JavaScript
-                    y carrito de compras sin conexión a medios de pago aún.
+                    y carrito de compras listo para conexión a medios de pago.
                   </p>
                   <h3>🐶 TinderPet</h3>
                   <p>
-                    Sección de adopciones que carga animales (desde JSON
-                    momentáneamente) y permite filtrar por tipo, tamaño y edad.
-                    Es la base de diseño de un protoagente.
+                    Sección de adopciones que carga animales (desde JSON para
+                    demo) y permite filtrar por tipo, tamaño y edad. Es la base
+                    de diseño de un protoagente.
                   </p>
                   <p>
                     <a
@@ -163,20 +172,22 @@
                 <div class="flip-card-front">
                   <h3>🧪 SimpleDEX</h3>
                   <p>
-                    dApp en React para operar con un contrato de intercambio de
-                    tokens.
+                    dApp con front en React que permite operar con un contrato
+                    deployado y verificado en Sepolia de intercambio de tokens.
                   </p>
                 </div>
                 <div class="flip-card-back">
-                  <h3>🧪 Interacción con el contrato</h3>
+                  <h3>🧪 Interacciones del SC</h3>
                   <p>
                     Conecta una wallet compatible con MetaMask para agregar o
                     retirar liquidez, intercambiar tokens en ambos sentidos y
                     consultar precios.
                   </p>
                   <p>
-                    La interfaz usa Web3.js y los contratos están desplegados y
-                    verificados en Sepolia.
+                    La interfaz usa Web3.js, todos los contratos están
+                    desplegados y verificados en Sepolia. Los SC de tokens
+                    utilizan ERC-20 y el contrato de intercambio implementa la
+                    lógica de liquidez y swap de tokens.
                   </p>
                   <p>
                     <a
@@ -233,7 +244,7 @@
                   </p>
                   <p>
                     El proyecto está en desarrollo: el contrato está listo y
-                    pasa los tests, la interfaz actual usa funciones mock y
+                    pasa los 7 tests, la interfaz actual usa funciones mock y
                     todavía no completa el flujo con el contrato.
                   </p>
                   <p>
@@ -259,20 +270,26 @@
                   <h3>🛸 OVNI Sightings</h3>
                   <p>
                     Análisis exploratorio y de series temporales sobre registros
-                    de avistamientos.
+                    de avistamientos usando SAS Viya.
                   </p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🛸 OVNI Sightings</h3>
                   <p>
-                    Integra registros de Kaggle y datos argentinos recopilados
-                    mediante scraping, con preparación de datos para
-                    visualizaciones y series temporales, forecasting con ARIMA e
-                    implementación de criterios de accesibilidad.
+                    Proyecto grupal de The Outliers<sup>*</sup>, integra
+                    registros de Kaggle y datos argentinos recopilados mediante
+                    scraping, con preparación de datos para visualizaciones y
+                    series temporales, forecasting con ARIMA e implementación de
+                    criterios de accesibilidad (contraste y paleta de colores).
                   </p>
                   <p>
                     El análisis estudia los registros disponibles; no predice
                     fenómenos extraterrestres.
+                  </p>
+                  <p>
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                      >📁 Repo del equipo en GitHub</a
+                    >
                   </p>
                 </div>
               </div>
@@ -281,18 +298,24 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <h3>🚦 Siniestralidad vial en CABA</h3>
+                  <h3>🚦 Siniestralidad vial en CABA - 2019 a 2024</h3>
                   <p>
                     Análisis de siniestros viales y variables meteorológicas con
-                    experimentación de modelos.
+                    experimentación de modelos de ML: Random Forest y Regresión
+                    Lineal.
                   </p>
+                  <img
+                    class="project-screenshot"
+                    src="./assets/images/siniestralidad-vial-caba.jpg"
+                    alt="Vista general del análisis de siniestralidad vial en CABA"
+                  />
                 </div>
                 <div class="flip-card-back">
-                  <h3>🚦 Datos, clima y modelos</h3>
+                  <h3>🚦 Datos, clima y modelos que fallan</h3>
                   <p>
                     Proyecto grupal de The Outliers<sup>*</sup> sobre datos de
-                    CABA, enriquecidos con información climática y de
-                    calendario.
+                    CABA (2019 a 2024), adicionando información climática y de
+                    calendario (días de la semana y feriados).
                   </p>
                   <p>
                     Compara enfoques de machine learning sobre un conjunto
@@ -331,7 +354,71 @@
             >
           </div>
         </section>
+        <section id="integrador" class="project-section project-section--integrator">
+          <h2>Proyecto Integrador de Tecnologías (end-to-end)</h2>
+          <div class="integrator-content">
+            <div class="card-container">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h3>"Ponele Música a tus Emociones"</h3>
+                    <p>
+                      App que brinda a los usuarios una experiencia inmersiva:
+                      el visitante recibe una frase y música acorde al
+                      sentimiento/emoción dominante detectado en la fotografía
+                      suministrada. Simultáneamente, la página toma colores
+                      relacionados a este evento.
+                    </p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Se entrenó un modelo de Deep Learning (DenseNet121) para
+                      la detección de emociones en imágenes. Inicialmente se
+                      trabajó con Keras y el dataset Fer2013. Luego se migró a
+                      PyTorch, utilizando el dataset RAF-DB. Al conjunto de
+                      entrenamiento hubo que aplicarle técnicas para mitigar el
+                      desbalance de clases. La selección de música proviene de
+                      un banco que contiene una recopilación de segmentos
+                      musicales libres de copyright asociados a la clasificación
+                      de emociones. La app fue desarrollada con xxx y
+                      desplegada en xxx.
+                    </p>
+                    <p>
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        >🌐 Ver sitio publicado</a
+                      ><br />
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        >📁 Repo en GitHub</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="integrator-gallery">
+              <!-- Las capturas del proyecto se agregarán aquí. -->
+            </div>
+          </div>
+        </section>
       </div>
+      <section id="community">
+        <h2>Tecnología, comunidad y otras ideas <i>peligrosas</i></h2>
+        <p>
+          Además de desarrollar proyectos, me interesa construir comunidad y compartir conocimiento.
+          Escribo sobre tecnología, datos e IA en LinkedIn y Medium, y participo en iniciativas orientadas
+          al aprendizaje colaborativo.
+        </p>
+        <ul>
+          <li>Leo, escribo, reflexiono y publico sobre tecnología, datos e IA en LinkedIn y Medium.</li>
+          <li>
+            2022 - Formé parte del grupo de estudiantes que organizó los grupos de materias en la comunidad del ISPC
+          </li>
+          <li>
+            2025 - Creé y co-administro una comunidad de WhatsApp utilizada por estudiantes de Ciencia de Datos en la UdelaCiudad
+          </li>
+          <li>2026 - Fui nombrada AWS Student Builder Group Leader & Founder en la UdelaCiudad</li>
+        </ul>
+      </section>
     </main>
     <footer class="footer" id="contact">
       <div class="footer-content">
