@@ -1,22 +1,34 @@
-/* Variables de color para ambos modos */
+/* El modo oscuro es el tema inicial. */
 :root {
-  --bg-gradient: linear-gradient(135deg, #f5e9f5, #c68de1, #6a0dad);
-  --text-color: #36054d;
-  --accent-color: #bd0bea;
-  --header-bg: #ffffff;
-  --card-bg: #ffffff;
-  --footer-bg: #ffffff;
-  --project-section-bg: rgba(255, 255, 255, 0.42);
-}
-
-[data-theme="dark"] {
   --bg-gradient: linear-gradient(135deg, #2c2c2c, #6a0dad);
   --text-color: #eaeaea;
   --accent-color: #db0bea;
+  --card-border-color: color-mix(in srgb, var(--accent-color), white 15%);
   --header-bg: #1e1e1e;
   --card-bg: #1e1e1e;
   --footer-bg: #000000;
   --project-section-bg: rgba(30, 30, 30, 0.42);
+  --boton-bg: #333;
+  --boton-text: #f0f0f0;
+  --boton-hover: #444;
+  --scrollbar-track: #25202b;
+  --scrollbar-thumb: #8b18ad;
+}
+
+[data-theme="light"] {
+  --bg-gradient: linear-gradient(135deg, #f5e9f5, #c68de1, #6a0dad);
+  --text-color: #36054d;
+  --accent-color: #bd0bea;
+  --card-border-color: color-mix(in srgb, var(--accent-color), white 15%);
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --footer-bg: #ffffff;
+  --project-section-bg: rgba(255, 255, 255, 0.42);
+  --boton-bg: #f0f0f0;
+  --boton-text: #333;
+  --boton-hover: #ddd;
+  --scrollbar-track: #eee5f1;
+  --scrollbar-thumb: #bd0bea;
 }
 
 /* Reset básico */
@@ -38,12 +50,13 @@ body {
 
 /* Encabezado */
 header {
+  position: relative;
   background-color: var(--header-bg);
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   max-width: 1000px;
+  min-height: 126px;
   margin: 0 auto;
   display: flex;
-  gap: 1.25rem;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
@@ -51,11 +64,7 @@ header {
 }
 
 .header-identity {
-  display: flex;
-  flex: 1 1 auto;
-  align-items: center;
-  gap: 1rem;
-  min-width: 0;
+  display: contents;
 }
 
 .profile-image {
@@ -69,18 +78,16 @@ header {
 }
 
 .header-copy {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.header-copy p {
-  margin-top: 0.25rem;
-  overflow-wrap: anywhere;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--accent-color);
+  white-space: nowrap;
 }
 
 /* Botón de tema */
@@ -92,9 +99,8 @@ header h1 {
   color: var(--text-color);
   transition: transform 0.3s ease;
 }
-#themeToggle:hover,
-#Translate:hover {
-  transform: scale(1.1);
+#themeToggle:hover {
+  transform: scale(1.05);
 }
 
 /* Navegación */
@@ -304,6 +310,10 @@ a:hover {
   perspective: 1000px;
 }
 
+.flip-card:has(.project-screenshot) {
+  height: 370px;
+}
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -334,7 +344,27 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backface-visibility: hidden;
   overflow-y: auto;
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--card-border-color);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+.flip-card-front::-webkit-scrollbar,
+.flip-card-back::-webkit-scrollbar {
+  width: 8px;
+}
+
+.flip-card-front::-webkit-scrollbar-track,
+.flip-card-back::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 8px;
+}
+
+.flip-card-front::-webkit-scrollbar-thumb,
+.flip-card-back::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 2px solid var(--scrollbar-track);
+  border-radius: 8px;
 }
 
 .flip-card-front {
@@ -365,16 +395,29 @@ a:hover {
   display: block;
   position: absolute;
   left: 50%;
-  bottom: 1rem;
+  bottom: 2.5rem;
   box-sizing: border-box;
   width: 90%;
   height: 123px;
   margin: 0;
   transform: translateX(-50%);
   border-radius: 6px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--card-border-color);
   object-fit: cover;
   object-position: top;
+}
+
+.flip-card-hint {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.55rem;
+  left: 1rem;
+  margin: 0;
+  color: var(--accent-color) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  line-height: 1.2 !important;
+  text-align: center;
 }
 
 .flip-card a {
@@ -396,18 +439,17 @@ a:hover {
   }
 
   header {
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 1rem;
+    min-height: 110px;
+    padding: 0.75rem 1rem;
   }
 
-  .header-identity {
-    flex: 1 1 100%;
+  .profile-image {
+    flex-basis: 72px;
+    width: 72px;
+    height: 72px;
   }
 
   #botones-utilidad {
-    flex-wrap: wrap;
-    justify-content: flex-start;
     margin: 0;
   }
 
@@ -424,6 +466,10 @@ a:hover {
     width: min(100%, 360px);
     min-width: 0;
     height: 340px;
+  }
+
+  .flip-card:has(.project-screenshot) {
+    height: 410px;
   }
 
   .flip-card-front,
@@ -446,27 +492,28 @@ a:hover {
   }
 
   header {
-    align-items: flex-start;
     min-width: 0;
-  }
-
-  header > * {
-    min-width: 0;
-    max-width: 100%;
+    min-height: 92px;
+    padding: 0.6rem;
   }
 
   .profile-image {
-    flex-basis: 64px;
-    width: 64px;
-    height: 64px;
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
   }
 
   .header-copy h1 {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
   }
 
   #botones-utilidad {
-    width: 100%;
+    width: auto;
+  }
+
+  #botones-utilidad button {
+    padding: 7px 8px;
+    font-size: 0.75rem;
   }
 
   .navegador ul {
@@ -498,6 +545,10 @@ a:hover {
     width: min(100%, 360px);
     height: 380px;
   }
+
+  .flip-card:has(.project-screenshot) {
+    height: 440px;
+  }
 }
 
 /* Ajuste provisional para teléfonos angostos */
@@ -507,11 +558,7 @@ a:hover {
   }
 
   .header-copy h1 {
-    font-size: 1.5rem;
-  }
-
-  .header-copy > p {
-    overflow-wrap: anywhere;
+    font-size: 1.2rem;
   }
 
   .flip-card {
@@ -533,13 +580,18 @@ a:hover {
   }
 
   .profile-image {
-    flex-basis: 56px;
-    width: 56px;
-    height: 56px;
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
   }
 
   .header-copy h1 {
-    font-size: 1.35rem;
+    font-size: 1.05rem;
+  }
+
+  #botones-utilidad button {
+    padding: 6px;
+    font-size: 0.68rem;
   }
 
   .flip-card {
@@ -561,7 +613,7 @@ a:hover {
 
 /* Estilo base para ambos botones */
 #botones-utilidad button {
-  padding: 8px 16px;
+  padding: 8px 10px;
   font-size: 0.9rem;
   border: none;
   border-radius: 6px;
@@ -581,19 +633,6 @@ a:hover {
   display: none;
 }
 
-/* Variables para modo claro */
-:root {
-  --boton-bg: #f0f0f0;
-  --boton-text: #333;
-  --boton-hover: #ddd;
-}
-
-/* Variables para modo oscuro */
-body.dark-mode {
-  --boton-bg: #333;
-  --boton-text: #f0f0f0;
-  --boton-hover: #444;
-}
 
 hr {
   margin-top: 3rem;

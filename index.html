@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,23 +16,11 @@
         />
         <div class="header-copy">
           <h1>Claudia Metz</h1>
-          <p>
-            Datos, IA y sistemas digitales con foco en utilidad, claridad e
-            impacto sin olvidar el pensamiento crítico
-          </p>
         </div>
       </div>
       <div id="botones-utilidad">
-        <button id="themeToggle">🌗 Cambiar tema</button>
-        <button
-          id="Translate"
-          onclick="
-            window.location.href =
-              'https://translate.google.com/translate?hl=&sl=auto&tl=en&u=' +
-              window.location.href
-          "
-        >
-          🌐 Traducir página
+        <button id="themeToggle" aria-label="Cambiar tema">
+          🌗 Cambiar tema
         </button>
       </div>
       <script>
@@ -60,23 +48,29 @@
     <section id="about">
       <h2>Sobre mí</h2>
       <p>
-        Técnica Superior en Ciencia de Datos e IA, actualmente cursando las
-        Licenciaturas en Ciencia de Datos y Tecnologías Digitales. Exploro cómo
-        conectar datos, tecnología e inteligencia artificial para crear
-        soluciones útiles, con criterio y foco en las necesidades reales. Me
-        interesa comprender los sistemas, experimentar con herramientas y
-        transformar ideas en proyectos funcionales, sin perder de vista el
-        propósito ni la calidad de lo que construyo.
+        Siempre estoy explorando tecnologías, tratando de entender cómo
+        funcionan las cosas y descubriendo qué puede surgir al combinar
+        distintas herramientas e ideas. Disfruto experimentar, hacer preguntas,
+        encontrar conexiones y transformar lo que voy aprendiendo en proyectos
+        concretos, pero también en proyectos vivos, que siguen creciendo y
+        mutando con el tiempo. Me interesa tanto el proceso de construir como
+        entender qué hay detrás de cada solución, por qué hacemos lo que hacemos
+        y qué otras posibilidades pueden surgir.
+      </p>
+      <p>
+        Por cierto, soy Técnica Superior en Ciencia de Datos e IA y actualmente
+        curso las Licenciaturas en Ciencia de Datos y en Tecnologías Digitales.
       </p>
     </section>
 
     <main id="projects">
       <h2>Proyectos</h2>
       <p>
-        Estas 3 áreas son un muestreo acotado de distintos aspectos de mi
-        formación y mi experiencia en tecnologías. El proyecto integrador
-        combina conceptos y herramientas de varias de ellas para crear una
-        solución completa y funcional.
+        Estas tres áreas son una muestra acotada de mi formación y mi
+        experimentación con tecnologías. En los proyectos integradores se
+        combinan conceptos y herramientas de varias de ellas para recorrer el
+        camino desde una idea hasta un producto mínimo viable (MVP), desplegado
+        y funcional.
       </p>
       <br />
       <div class="project-groups">
@@ -96,6 +90,7 @@
                     src="./assets/images/cards-Imgs/web2/tienda-mascotas.png"
                     alt="Catálogo de productos de la tienda de mascotas"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🐾 Tienda Mascotas</h3>
@@ -140,6 +135,7 @@
                     src="./assets/images/cards-Imgs/web2/violeta.png"
                     alt="Página de inicio de Violeta, Astrología y Tarot"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🌙 Violeta</h3>
@@ -190,6 +186,7 @@
                     src="./assets/images/cards-Imgs/web3/simpledex.png"
                     alt="Interfaz de SimpleDEX para agregar liquidez, intercambiar tokens y consultar precios"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🧪 Interacciones del SC</h3>
@@ -254,6 +251,7 @@
                     src="./assets/images/cards-Imgs/web3/zkcheck-post-hack-bsas-2026.jpg"
                     alt="Presentación de zkCheck, proyecto creado durante la Hack BsAs 2026"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🔐 Verificación privada</h3>
@@ -297,6 +295,7 @@
                     src="./assets/images/cards-Imgs/data-IA/ovni-sightings-sas-viya.jpg"
                     alt="Paneles del análisis de avistamientos OVNI realizado en SAS Viya"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🛸 OVNI Sightings</h3>
@@ -331,9 +330,10 @@
                   </p>
                   <img
                     class="project-screenshot"
-                    src="./assets/images/siniestralidad-vial-caba.jpg"
+                    src="./assets/images/cards-Imgs/data-IA/siniestralidad-vial-caba.jpg"
                     alt="Vista general del análisis de siniestralidad vial en CABA"
                   />
+                  <p class="flip-card-hint">↻ Girá para ver más</p>
                 </div>
                 <div class="flip-card-back">
                   <h3>🚦 Datos, clima y modelos que fallan</h3>
