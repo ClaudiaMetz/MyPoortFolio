@@ -462,6 +462,15 @@ a:hover {
     padding: 0.875rem;
   }
 
+  [data-theme="dark"] .project-section {
+    background: radial-gradient(
+      ellipse at 50% 0%,
+      #4a2856 0%,
+      #382a40 58%,
+      #2c2633 100%
+    );
+  }
+
   .flip-card {
     width: min(100%, 360px);
     min-width: 0;
@@ -512,8 +521,21 @@ a:hover {
   }
 
   #botones-utilidad button {
-    padding: 7px 8px;
-    font-size: 0.75rem;
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    place-items: center;
+    border-radius: 8px;
+  }
+
+  #themeToggle .theme-label {
+    display: none;
+  }
+
+  #themeToggle .theme-icon {
+    font-size: 1.2rem;
+    line-height: 1;
   }
 
   .navegador ul {
@@ -590,8 +612,7 @@ a:hover {
   }
 
   #botones-utilidad button {
-    padding: 6px;
-    font-size: 0.68rem;
+    padding: 0;
   }
 
   .flip-card {
@@ -712,6 +733,10 @@ hr {
 
   .footer-links {
     gap: 0.5rem 0.75rem;
+  }
+
+  .back-to-top {
+    bottom: max(1rem, env(safe-area-inset-bottom));
   }
 }
 

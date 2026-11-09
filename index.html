@@ -19,8 +19,9 @@
         </div>
       </div>
       <div id="botones-utilidad">
-        <button id="themeToggle" aria-label="Cambiar tema">
-          🌗 Cambiar tema
+        <button id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+          <span class="theme-icon" aria-hidden="true">🌗</span>
+          <span class="theme-label">Cambiar tema</span>
         </button>
       </div>
       <script>
@@ -40,7 +41,7 @@
       <ul>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#community">Comunidad y divulgación</a></li>
+        <li><a href="#community">Comunidad</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
@@ -440,27 +441,24 @@
         </p>
         <ul>
           <li>
-            Leo, escribo, reflexiono y publico sobre tecnología, datos e IA en
-            LinkedIn y Medium.
-          </li>
-          <li>
             2022 - Formé parte del grupo de estudiantes que organizó los grupos
             de materias en la comunidad del ISPC
           </li>
           <li>
             2025 - Creé y co-administro una comunidad de WhatsApp utilizada por
-            estudiantes de Ciencia de Datos en la UdelaCiudad
+            los estudiantes de Ciencia de Datos en la UdelaCiudad
           </li>
           <li>
-            2026 - AWS me otorgó el título de Student Builder Group Leader &
-            Founder en la UdelaCiudad
+            2026 - Fundé y lidero el AWS Student Builder Group de la
+            UdelaCiudad, con el respaldo oficial de Amazon y el apoyo
+            institucional de la universidad.
           </li>
         </ul>
       </section>
     </main>
     <footer class="footer" id="contact">
       <div class="footer-content">
-        <p>&copy; 2026 Designed and powered by ClaudiaM.</p>
+        <p>&copy; 2026 Designed and built by ClaudiaM 💜</p>
         <div class="footer-links">
           <a href="https://github.com/ClaudiaMetz">GitHub</a>
           <a href="https://www.linkedin.com/in/claudia-metz">LinkedIn</a>
@@ -500,13 +498,30 @@
       }
 
       const backToTop = document.querySelector(".back-to-top");
+      const footer = document.querySelector(".footer");
       const updateBackToTop = () => {
-        const isVisible = window.scrollY > 300;
+        const footerBounds = footer.getBoundingClientRect();
+        const gapAboveFooter = 16;
+        const buttonHeight = backToTop.offsetHeight;
+        const footerIsInView =
+          footerBounds.top < window.innerHeight && footerBounds.bottom > 0;
+        const canSitAboveFooter =
+          footerBounds.top > buttonHeight + gapAboveFooter;
+
+        if (footerIsInView && canSitAboveFooter) {
+          backToTop.style.bottom = `${window.innerHeight - footerBounds.top + gapAboveFooter}px`;
+        } else {
+          backToTop.style.bottom = "";
+        }
+
+        const isVisible =
+          window.scrollY > 300 && !(footerIsInView && !canSitAboveFooter);
         backToTop.classList.toggle("is-visible", isVisible);
         backToTop.setAttribute("aria-hidden", String(!isVisible));
       };
 
       window.addEventListener("scroll", updateBackToTop, { passive: true });
+      window.addEventListener("resize", updateBackToTop);
       backToTop.addEventListener("click", () => {
         const behavior = window.matchMedia("(prefers-reduced-motion: reduce)")
           .matches
